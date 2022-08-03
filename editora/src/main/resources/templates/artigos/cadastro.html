@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/style.css">
+
+  <title>Cadastro de artigo</title>
+</head>
+<body>
+  		<form method="post" th:action="@{/salvarartigo}" th:object="${artigoobj}">
+			<div class="mb-3">
+  				<label>Id: </label> 
+				<label th:text="${artigoobj.id}">id</label> 
+				<input type="hidden" class="form-control" th:field="*{id}" th:value="${artigoobj.id}"/>
+			</div>
+    		<div class="mb-3">
+      			<label for="exampleInputEmail1" class="form-label">Título</label>
+      			<input type="text" class="form-control" name="titulo" th:field = "*{titulo}">
+ 
+    		</div>
+    		<div class="mb-3">
+      			<label for="exampleInputPassword1" class="form-label">Resumo</label>
+      			<input type="text" class="form-control" name="resumo" th:field = "*{resumo}">
+    		</div>
+    
+		    <div class="mb-3">
+				<input type="hidden" class="form-control" name="publicado" value ="true">
+		    </div> 
+   
+			    <button type="submit" class="btn btn-primary">Cadastrar</button>
+		</form>
+</body>
+</html>

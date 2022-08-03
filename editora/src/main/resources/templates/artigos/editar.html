@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Artigo</title>
+</head>
+<body>
+	<form method="POST" th:action="@{/listarartigos}" th:object="${artigoobj}" th:method="put">
+		<h1>Atualizar Artigo</h1>
+		<a th:href="@{/listarartigos}" id="another">Voltar</a><br />
+
+		<h3>Modifique os detalhes do artigo</h3>
+		<label>Id: </label> 
+		<label th:text="${artigoobj.id}">id</label> 
+		<input name= "id" th:field="*{id}"/>
+		<br/> 
+		<label>Titulo:</label> 
+		<input type="text" th:field="*{titulo}"/>
+		<br/> 
+		<label>Resumo: </label>
+		 <input type="text" th:field="*{resumo}"/> 
+		<br/>
+		 <div class="mb-3">
+				<input type="hidden" class="form-control" name="publicado" value ="true">
+		    </div> 
+		<br/>
+		<input type="submit" value="Salvar" />
+	</form>
+</body>
+</html>
