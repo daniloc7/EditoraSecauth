@@ -2,7 +2,7 @@
 Api Editora utilizando Spring Boot e Thymeleaf utilizando a autenticação do Amazon Cognito.
 
 # Academicos: 
-Danilo Carneito Christensen,
+Danilo Carneiro Christensen,
 
 Fernando Sobutka,
 
@@ -10,7 +10,7 @@ Ricardo Harano Pinto
 
 # Descrição da API
 
-No ArtigoController, foi utilizado o ModelAndView para criar as páginas para colocar os métodos.
+No ArtigoController, foi utilizado o ModelAndView para criar as representações das páginas, demonstrando os dados.
 
 No método GET /listarartigos cria uma lista para imprimir os artigos.
 
